@@ -1,0 +1,42 @@
+
+.dot {
+    margin-top: 8px;
+    height: 35px;
+    width: 35px;
+
+    border-radius: 50%;
+    display: inline-block;
+    /* background: radial-gradient(circle at 15px 15px, red, #000); */
+  }
+
+  .inputDot{
+    height: 30px;
+    width: 30px;
+    background: radial-gradient(circle at 14px 14px, rgba(104, 101, 101, 0.651)  , #000);
+    opacity: 0.5;
+    margin-top: 12px;
+  }
+
+  .hintDot{
+    height: 15px;
+    width: 15px;
+    background: radial-gradient(circle at 7px 7px, rgba(104, 101, 101, 0.651)  , #000);
+    opacity: 0.5;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .find {
+    position:absolute;
+    text-align: center;
+    width:100%; 
+  }
+
+  @media (max-width:365px) {
+    /* your conditional / responsive CSS inside this condition */
+    .this-class { 
+      padding-right: 10px;
+      padding-left: 0px;
+     }
+  }

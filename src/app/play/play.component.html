@@ -1,0 +1,46 @@
+<div style="text-align:center">
+        <h1>
+          Guess the code!!!
+          <img width="50" alt="brain Logo" src="../assets/brain1.jpg">
+        </h1>
+
+       
+    </div>
+
+<div class="row border" [ngStyle]="{'height':'auto'}" *ngFor="let rowNumber of totalInputRowCountArray">
+<div class="col-10 col-tn-10 col-xs-10 ">
+    <div class="row ">
+        <div class="col-3 text-center" *ngFor="let inputRowColorCount of inputRowColorCountArray">
+            <span #inputDot class="dot inputDot" (click)="inputRowClicked(rowNumber,inputRowColorCount,inputDot)"
+            id='row {{rowNumber}} inputColorNumber {{inputRowColorCount}}'></span>
+        </div>
+    </div>
+</div>
+
+<div class="col-2">
+    <div class="row">
+        <div class="col-6 text-center this-class" *ngFor="let item of inputRowColorCountArray">
+            <span class="dot hintDot" id="row {{rowNumber}} hintDot {{item}}"></span>
+        </div>
+        
+        <div class="find">
+            <img src="../../assets/find.png" height="50px" width="50px" (click)="findButtonClicked()" 
+            id='findImage {{rowNumber}}' [ngStyle]="{'display':'none'}" />
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<br><br><br><br>
+
+<div class="fixed-bottom row  border p-3 mb-2 bg-light text-white" [ngStyle]="{'margin': '5px'}">
+
+    <div class="col-2 text-center" *ngFor="let item of totalColor; let i = index;">
+        <span class="dot" [ngStyle]="{ 'background': 'radial-gradient(circle at 15px 15px,'+ item +'  , #555)' }"
+        (click)="changeActiveColor(i)"></span>
+    </div>
+
+</div>
+
